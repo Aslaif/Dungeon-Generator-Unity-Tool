@@ -1,0 +1,34 @@
+{
+    "name": "GeneratDungeon",
+    "maps": [
+        {
+            "name": "default",
+            "id": "6b4742cd-d9c3-4709-8495-dcb9e89173cd",
+            "actions": [
+                {
+                    "name": "GenerateMultithreading",
+                    "type": "Button",
+                    "id": "968101bf-a48a-4a21-87d1-188ee931f449",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "94b5a797-ba1d-4dc2-b60b-f7e276f670c7",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GenerateMultithreading",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
