@@ -8,6 +8,7 @@ Object instantiation runs on the main thread due to Unity’s threading limitati
 ## Preview
 
 ![Dungeon Generation](images/dungeon_generation.gif)
+![Aufzeichnung-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/f644d83c-cf66-41ce-b30b-a66004a6bb75)
 
 ![Generated Dungeon](images/dungeon_example.png)
 <img width="913" height="500" alt="Bild 3" src="https://github.com/user-attachments/assets/064a3c8d-ae29-44bf-934a-2722ea09f0e4" />
@@ -75,6 +76,7 @@ These prefabs are then used as building blocks when the dungeon is generated.
 ## Example Generation
 
 ![Generation Example](images/generation_example.gif)
+![Aufzeichnung-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/86f35aa1-0c8f-4f53-a1dd-2cdff2ed3d96)
 
 ---
 
