@@ -95,7 +95,6 @@ namespace Assets.Scripts.DungeonGenerator
             {
                 case 1:
                     {
-
                         if (levelData.levelmap[x, y] == ERoomType.Item)
                             prefabToSpawn = endRoomsItem[Random.Range(0, endRoomsItem.Count)];
                         else if (levelData.levelmap[x, y] == ERoomType.Shop)
@@ -163,9 +162,8 @@ namespace Assets.Scripts.DungeonGenerator
 
         private int GetNeighbourCountAndDirections(ref bool[] directionsArray, Vector2Int coord)
         {
-            if (directionsArray == null || directionsArray.Length != 4)  // brauche eine erklearung dazu
+            if (directionsArray == null || directionsArray.Length != 4)
                 return 0;
-
 
             Vector2Int[] neighbourCoord = new Vector2Int[]
             {

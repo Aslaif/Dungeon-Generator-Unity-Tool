@@ -188,12 +188,6 @@ public struct DungeonGeneratorJob : IJob
         return neighbourCount;
     }
 
-    private bool ValidateMap(int generatedRoomCount, int roomCountToGenerate)
-    {
-        Debug.Log($"{generatedRoomCount}:{roomCountToGenerate}:{currentEndRoom}");
-        return generatedRoomCount == roomCountToGenerate && currentEndRoom >= 2;
-    }
-
     private void GenerateSpecialRooms()
     {
         currentEndRoom--;

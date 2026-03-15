@@ -26,7 +26,6 @@ public class DungeonGeneratorJobSystem
         this.minRoomCount = roomCount;
         this.levelmaps = levelmaps;
         this.seed = seed;
-
     }
 
     public void StartMultiThread()
