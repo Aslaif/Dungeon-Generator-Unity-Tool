@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace Assets.Scripts.DungeonGenerator
 {
-    public class MonoMapInterpreter : MonoBehaviour, IMapInterpreter
+    [CreateAssetMenu(fileName = "MapInterpreter", menuName = "DungeonGenerator/MapInterpreter")]
+    public class MapInterpreter : ScriptableObject, IMapInterpreter
     {
         public float roomSize = 10f;
         public float roomHeight = 2f;
@@ -178,8 +179,7 @@ namespace Assets.Scripts.DungeonGenerator
             for (int i = 0; i < neighbourCoord.Length; i++)
             {
                 Vector2Int currentNeighbourCoord = neighbourCoord[i];
-                directionsArray[i] = false;                         // warum? ist doch schon false
-
+                directionsArray[i] = false;                         
 
                 if (!IsCoordInBounds(currentNeighbourCoord))
                     continue;

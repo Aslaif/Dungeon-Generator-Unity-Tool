@@ -40,7 +40,7 @@ public class DungeonGeneratorSingleThread
     private LevelData GenerateLevelMap(int level)
     {
         LevelData levelData = new LevelData(width, height);
-        int roomCountToGenerate = (int)Mathf.Clamp((Random.Range(0, 2) + minRoomCount - 2 + level * 2.6f), minRoomCount, width * height / 5);
+        int roomCountToGenerate = (int)Mathf.Clamp(Random.Range(0, 2) + minRoomCount - 2 + level * 2.6f, minRoomCount, width * height / 5);
         Vector2Int startCoord = new Vector2Int(width, height) / 2;
 
         bool isMapValid = false;

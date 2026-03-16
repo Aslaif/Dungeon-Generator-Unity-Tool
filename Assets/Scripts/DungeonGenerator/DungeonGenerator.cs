@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using UnityEditor;
 using UnityEngine;
 
 namespace Assets.Scripts.DungeonGenerator
 {
-    [RequireComponent(typeof(MonoMapInterpreter))]
-    public class DungeonGenerator : MonoBehaviour
+    [RequireComponent(typeof(MapInterpreter))]
+    [CreateAssetMenu(fileName = "DungeonGenerator", menuName = "DungeonGenerator/DungeonGenerator")]
+    public class DungeonGenerator : ScriptableObject
     {
         public int seed;
         public bool multiThreading;
@@ -20,7 +22,7 @@ namespace Assets.Scripts.DungeonGenerator
         DungeonGeneratorSingleThread singleThread;
         DungeonGeneratorJobSystem multiThread;
 
-        private MonoMapInterpreter monoMapInterpreter;
+        private MapInterpreter mapInterpreter;
         private IMapInterpreter interpreter;
 
         private void OnValidate()
@@ -32,20 +34,10 @@ namespace Assets.Scripts.DungeonGenerator
             }
         }
 
-        private void Awake()
-        {
-            monoMapInterpreter = this.GetComponent<MonoMapInterpreter>();
-            Init();
-        }
-
-        private void Start()
-        {
-            interpreter.InterpretMap(levelmaps, seed);
-        }
-
         public void StartGeneration ()
         {
-            monoMapInterpreter = this.GetComponent<MonoMapInterpreter>();
+            mapInterpreter = AssetDatabase.LoadAssetAtPath<MapInterpreter>
+                ("Assets/ScriptableObjects/MapInterpreter.asset");
             Init();
 
             interpreter.InterpretMap(levelmaps, seed);
@@ -62,8 +54,8 @@ namespace Assets.Scripts.DungeonGenerator
                 singleThread = new DungeonGeneratorSingleThread(width, height, levelCount, minRoomCount, levelmaps, seed);
             
 
-            if (monoMapInterpreter != null)
-                interpreter = monoMapInterpreter;
+            if (mapInterpreter != null)
+                interpreter = mapInterpreter;
 
             if (multiThreading)
                 multiThread.StartMultiThread();

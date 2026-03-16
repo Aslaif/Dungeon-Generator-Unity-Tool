@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEditor;
-using UnityEditor.PackageManager.UI;
+﻿using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 using Assets.Scripts.DungeonGenerator;
-using UnityEditorInternal;
 
 namespace Assets.Scripts.Editor
 {
@@ -25,7 +17,7 @@ namespace Assets.Scripts.Editor
         private SerializedProperty levelCount;
         private SerializedProperty minRoomCount;
 
-        private MonoMapInterpreter interpreter;
+        private MapInterpreter interpreter;
         private SerializedObject serializedInterpreter;
         private SerializedProperty roomSize;
         private SerializedProperty roomHeight;
@@ -49,8 +41,10 @@ namespace Assets.Scripts.Editor
 
         private void OnEnable()
         {
-            interpreter = FindObjectOfType<MonoMapInterpreter>();
-            generator = FindObjectOfType<DungeonGenerator.DungeonGenerator>();
+            interpreter = AssetDatabase.LoadAssetAtPath<MapInterpreter>
+                ("Assets/ScriptableObjects/MapInterpreter.asset");
+            generator = AssetDatabase.LoadAssetAtPath<DungeonGenerator.DungeonGenerator>
+                ("Assets/ScriptableObjects/DungeonGenerator.asset");
 
             if (interpreter != null)
             {

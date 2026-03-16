@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0834cfaae9fa8244889b0ffa5d0ac12d, type: 3}
+  m_Name: MapInterpreter
+  m_EditorClassIdentifier: 
+  roomSize: 10
+  roomHeight: 2.4
+  roomsOneDoor:
+  - {fileID: 831679155023171560, guid: 9f6e494c28206194a8f7ee79a222be36, type: 3}
+  - {fileID: 1940101126611736835, guid: 713a50f05a6e51c41bafa47c361073c0, type: 3}
+  roomsTwoDoorCorner:
+  - {fileID: 3895280296312510556, guid: db50a1dc6f89a754dbc0e2cc8b0b0a75, type: 3}
+  - {fileID: 7949434766407231316, guid: 835bea57f6442db43aad438b2ff5c9f4, type: 3}
+  roomsTwoDoorThrough:
+  - {fileID: 2901299942102589198, guid: 9741bf7b564833f4bad8e312648a9ba5, type: 3}
+  - {fileID: 8493093872208525039, guid: ca13d78f7d0b82741a5af6c529d435b6, type: 3}
+  roomsThreeDoor:
+  - {fileID: 5272464314264977687, guid: cb733210cb402a04e9c990b55028210b, type: 3}
+  - {fileID: 1447668560397148074, guid: 268772ce81a316b4787869b3e3e82980, type: 3}
+  roomsFourDoors:
+  - {fileID: 4623382963990928735, guid: 94449edad0897854fabd85a367ccf36d, type: 3}
+  - {fileID: 7260613253689982976, guid: 99e00908dd9b7a94fbd960e8fdf14cad, type: 3}
+  endRoomsItem:
+  - {fileID: 831679155023171560, guid: 9f6e494c28206194a8f7ee79a222be36, type: 3}
+  - {fileID: 1940101126611736835, guid: 713a50f05a6e51c41bafa47c361073c0, type: 3}
+  endRoomsShop:
+  - {fileID: 831679155023171560, guid: 9f6e494c28206194a8f7ee79a222be36, type: 3}
+  - {fileID: 1940101126611736835, guid: 713a50f05a6e51c41bafa47c361073c0, type: 3}
+  endRoomsStairs:
+  - {fileID: 4743776953784364353, guid: 2d22589e8e252a7488d3b75bc578c0b3, type: 3}
+  - {fileID: 4743776953784364353, guid: 82fdae55ace4a3843affe8e19e6d5912, type: 3}
+  endRoomsBoss:
+  - {fileID: 1940101126611736835, guid: 713a50f05a6e51c41bafa47c361073c0, type: 3}
